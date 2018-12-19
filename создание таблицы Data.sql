@@ -1,0 +1,30 @@
+USE SaveImage
+GO
+TRUNCATE TABLE dbo.Data;
+GO
+
+--ALTER TABLE dbo.Data DROP Photo
+--ALTER TABLE dbo.Data DROP Cell_Number
+--ALTER TABLE dbo.Data DROP Work_Center_Id
+--ALTER TABLE dbo.Data DROP Pressform_Id
+--ALTER TABLE dbo.Data DROP Color_Id
+--ALTER TABLE dbo.Data DROP Defect_Id
+--ALTER TABLE dbo.Data DROP Box_Number
+--ALTER TABLE dbo.Data DROP Comments
+--ALTER TABLE dbo.Data DROP User_Id
+--ALTER TABLE dbo.Data DROP Working_Shift
+--ALTER TABLE dbo.Data DROP Period
+
+ALTER TABLE dbo.Data ADD Period DATETIME NOT NULL
+ALTER TABLE dbo.Data ADD User_Id INT NOT NULL
+ALTER TABLE dbo.Data ADD WorkingShift CHAR(2) NOT NULL
+ALTER TABLE dbo.Data ADD WorkCenter_Id INT NOT NULL
+ALTER TABLE dbo.Data ADD Pressform_Id INT NOT NULL
+ALTER TABLE dbo.Data ADD Color_Id INT NOT NULL
+ALTER TABLE dbo.Data ADD BoxNumber VARCHAR(50) NOT NULL
+ALTER TABLE dbo.Data ADD CellNumber TINYINT NOT NULL
+ALTER TABLE dbo.Data ADD ControlType INT NOT NULL
+ALTER TABLE dbo.Data ADD Defect_Id INT NOT NULL
+ALTER TABLE dbo.Data ADD Photo IMAGE NOT NULL
+ALTER TABLE dbo.Data ADD Comments TEXt NOT NULL
+GO
